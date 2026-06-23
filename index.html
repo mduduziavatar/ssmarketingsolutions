@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SS Marketing Solutions | Elite SFMC & MarTech Specialists</title>
-    <!-- Tailwind CSS for Modern Styling -->
+    <!-- Tailwind CSS v4 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -18,18 +18,25 @@
                 <span class="text-2xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">SS</span>
                 <span class="text-lg font-semibold tracking-tight text-slate-200">MARKETING SOLUTIONS</span>
             </div>
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-400">
+            
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-slate-400 hover:text-white focus:outline-none p-2" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav id="nav-menu" class="hidden absolute top-20 left-0 w-full bg-slate-900/95 border-b border-slate-800 p-6 flex flex-col space-y-4 md:static md:w-auto md:bg-transparent md:border-none md:p-0 md:flex md:flex-row md:space-y-0 md:items-center md:space-x-8 text-sm font-medium text-slate-400">
                 <a href="#about" class="hover:text-white transition-colors">Why Us</a>
                 <a href="#team" class="hover:text-white transition-colors">Our Founders</a>
                 <a href="#services" class="hover:text-white transition-colors">How We Partner</a>
-                <a href="#contact" class="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2.5 rounded-lg transition-all shadow-lg shadow-indigo-600/20">Work With Us</a>
+                <a href="#contact" class="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2.5 rounded-lg transition-all shadow-lg shadow-indigo-600/20 text-center">Work With Us</a>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="relative py-24 lg:py-32 overflow-hidden border-b border-slate-800">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(99,102,241,0.08),transparent_50%)]"></div>
+        <div class="absolute inset-0 bg-radial from-indigo-500/10 via-transparent to-transparent-50% pointer-events-none"></div>
         <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
             <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800/60 border border-slate-700 text-xs font-semibold tracking-wide text-indigo-400 mb-8">
                 <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span> Available for Subcontracting & Consulting
@@ -61,9 +68,9 @@
             <div class="max-w-3xl">
                 <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Solving the Implementation Friction</h2>
                 <p class="text-slate-400 leading-relaxed mb-6">
-                    Most enterprise MarTech implementations stall because technical architects don't speak business language, and project managers don't deeply understand AMPScript, SQL, or data models. 
+                    Most enterprise MarTech implementations stall because technical architects don't speak business language, and project managers don't deeply understand AMPScript, SQL, or complex data models. 
                 </p>
-                <p class="text-slate-400 leading-relaxed font-semibold text-slate-300">
+                <p class="text-slate-300 leading-relaxed font-semibold">
                     We eliminate that friction. By combining a veteran Senior Project Manager with a multi-certified Technical Architect, we deliver projects faster, with zero internal translation delay, directly maximizing your agency's or client's profit margins.
                 </p>
             </div>
@@ -78,42 +85,62 @@
                 <p class="text-slate-400">Two highly specialized skill sets aligned to cover the entire platform lifecycle.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
                 <!-- Siphesande Profile -->
-                <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-8 flex flex-col justify-between hover:border-slate-700 transition-all">
+                <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 lg:p-8 flex flex-col justify-between hover:border-slate-700 transition-all">
                     <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <div>
-                                <h3 class="text-2xl font-bold text-white">Siphesande</h3>
-                                <p class="text-indigo-400 font-medium text-sm tracking-wide uppercase mt-1">Senior Project Manager & Delivery Lead</p>
-                            </div>
-                            <div class="h-12 w-12 bg-indigo-600/10 text-indigo-400 rounded-xl flex items-center justify-center text-xl font-mono border border-indigo-500/20">
-                                2016
+                        <!-- Side-by-Side Header Layout -->
+                        <div class="flex flex-col lg:flex-row gap-6 items-start mb-6">
+                            <!-- Replace src with your image path (e.g., images/siphesande.jpg) -->
+                            <img src="siphesande.jpg" alt="Siphesande Makgetha" class="w-24 h-24 lg:w-28 lg:h-28 rounded-xl object-cover border border-slate-700/80 shadow-lg shrink-0">
+                            
+                            <div class="flex-1 w-full">
+                                <div class="flex items-start justify-between gap-4">
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-white tracking-tight">Siphesande Makgetha</h3>
+                                        <p class="text-indigo-400 font-medium text-xs tracking-wide uppercase mt-1 leading-relaxed">Senior Project Manager | Marketing Operations & Global Delivery Leader</p>
+                                    </div>
+                                    <div class="h-12 w-24 bg-indigo-600/10 text-indigo-400 rounded-xl flex flex-col items-center justify-center text-center px-2 border border-indigo-500/20 shrink-0">
+                                        <span class="text-sm font-black tracking-tight leading-none">10+ YRS</span>
+                                        <span class="text-[9px] font-semibold uppercase tracking-wider text-indigo-500 mt-1">EXP</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <p class="text-slate-400 leading-relaxed mb-6">
-                            A seasoned delivery expert with a decade of SFMC experience. Siphesande masterfully navigates executive stakeholder conversations, manages cross-functional scopes, and executes flawless campaign deployments for complex global organizations.
+
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            With over 10 years of experience leading complex digital marketing, CRM, and campaign delivery programs, Siphesande specializes in transforming strategy into execution at scale. She has successfully delivered multi-channel campaigns for global brands, managing cross-functional teams across creative, data, CRM, analytics, and technology disciplines. Known for aligning stakeholders, streamlining operations, and driving execution excellence.
                         </p>
                         
                         <div class="mb-6">
                             <h4 class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Core Impact</h4>
-                            <p class="text-sm text-slate-300 bg-slate-800/40 border border-slate-800 rounded-lg p-3">
-                                <i class="fa-solid fa-briefcase text-cyan-400 mr-2"></i> Current Senior Project Manager for Asia Society
-                            </p>
+                            <ul class="space-y-2 text-sm text-slate-300 bg-slate-800/40 border border-slate-800 rounded-lg p-4">
+                                <li class="flex items-start gap-2.5"><i class="fa-solid fa-briefcase text-cyan-400 mt-1 text-xs shrink-0"></i> <span>Senior Project Manager at Asia Society</span></li>
+                                <li class="flex items-start gap-2.5"><i class="fa-solid fa-globe text-cyan-400 mt-1 text-xs shrink-0"></i> <span>Delivered global marketing & fundraising campaigns across multiple regions</span></li>
+                                <li class="flex items-start gap-2.5"><i class="fa-solid fa-chart-line text-cyan-400 mt-1 text-xs shrink-0"></i> <span>Led operational excellence initiatives improving delivery efficiency & collaboration</span></li>
+                                <li class="flex items-start gap-2.5"><i class="fa-solid fa-handshake text-cyan-400 mt-1 text-xs shrink-0"></i> <span>Trusted partner to executive stakeholders, marketing leaders, and agency teams</span></li>
+                            </ul>
                         </div>
 
                         <div class="mb-6">
-                            <h4 class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">Core Expertise</h4>
-                            <div class="flex flex-wrap gap-2">
+                            <h4 class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">Delivery Leadership</h4>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs bg-slate-800 px-3 py-1.5 rounded-md text-slate-300 border border-slate-700/60">Strategic Project Leadership</span>
+                                <span class="text-xs bg-slate-800 px-3 py-1.5 rounded-md text-slate-300 border border-slate-700/60">Global Campaign Delivery</span>
                                 <span class="text-xs bg-slate-800 px-3 py-1.5 rounded-md text-slate-300 border border-slate-700/60">Stakeholder Management</span>
-                                <span class="text-xs bg-slate-800 px-3 py-1.5 rounded-md text-slate-300 border border-slate-700/60">Deployment Strategy</span>
-                                <span class="text-xs bg-slate-800 px-3 py-1.5 rounded-md text-slate-300 border border-slate-700/60">Global Delivery</span>
-                                <span class="text-xs bg-slate-800 px-3 py-1.5 rounded-md text-slate-300 border border-slate-700/60">Campaign Lifecycle Management</span>
+                                <span class="text-xs bg-slate-800 px-3 py-1.5 rounded-md text-slate-300 border border-slate-700/60">Cross-Functional Team Leadership</span>
+                            </div>
+                            <h4 class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">Operations Strategy</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs bg-slate-800 px-3 py-1.5 rounded-md text-slate-300 border border-slate-700/60">Marketing Operations</span>
+                                <span class="text-xs bg-slate-800 px-3 py-1.5 rounded-md text-slate-300 border border-slate-700/60">CRM & Email Marketing</span>
+                                <span class="text-xs bg-slate-800 px-3 py-1.5 rounded-md text-slate-300 border border-slate-700/60">Salesforce Marketing Cloud</span>
+                                <span class="text-xs bg-slate-800 px-3 py-1.5 rounded-md text-slate-300 border border-slate-700/60">Agile & Process Optimization</span>
                             </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div class="mt-4">
                         <h4 class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">Credentials</h4>
                         <div class="flex items-center gap-2 bg-indigo-950/30 border border-indigo-900/40 rounded-xl p-3 text-sm text-indigo-300">
                             <i class="fa-solid fa-certificate text-indigo-400"></i>
@@ -123,42 +150,49 @@
                 </div>
 
                 <!-- Siphiwe Profile -->
-                <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-8 flex flex-col justify-between hover:border-slate-700 transition-all">
+                <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 lg:p-8 flex flex-col justify-between hover:border-slate-700 transition-all">
                     <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <div>
-                                <h3 class="text-2xl font-bold text-white">Siphiwe</h3>
-                                <p class="text-cyan-400 font-medium text-sm tracking-wide uppercase mt-1">Technical Architect & Multi-Platform Expert</p>
-                            </div>
-                            <div class="h-12 w-12 bg-cyan-600/10 text-cyan-400 rounded-xl flex items-center justify-center text-xl font-mono border border-cyan-500/20">
-                                2020
+                        <!-- Side-by-Side Header Layout -->
+                        <div class="flex flex-col lg:flex-row gap-6 items-start mb-6">
+                            <!-- Replace src with your image path (e.g., images/siphiwe.jpg) -->
+                            <img src="siphiwe.jpg" alt="Siphiwe" class="w-24 h-24 lg:w-28 lg:h-28 rounded-xl object-cover border border-slate-700/80 shadow-lg shrink-0">
+                            
+                            <div class="flex-1 w-full">
+                                <div class="flex items-start justify-between gap-4">
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-white tracking-tight">Siphiwe</h3>
+                                        <p class="text-cyan-400 font-medium text-xs tracking-wide uppercase mt-1 leading-relaxed">Technical Architect & Multi-Platform MarTech Expert</p>
+                                    </div>
+                                    <div class="h-12 w-24 bg-cyan-600/10 text-cyan-400 rounded-xl flex flex-col items-center justify-center text-center px-2 border border-cyan-500/20 shrink-0">
+                                        <span class="text-xs font-black tracking-tight leading-none">MARTECH</span>
+                                        <span class="text-[9px] font-semibold uppercase tracking-wider text-cyan-500 mt-1">EXPERT</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <p class="text-slate-400 leading-relaxed mb-6">
-                            A highly certified technical specialist focused on engineering complex data streams, platform integrations, and advanced personalization models. Siphiwe pairs deep SFMC architecture mastery with multi-platform agility.
+
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            A highly certified technical specialist focused on engineering complex data streams, backend platform integrations, and advanced data schemas. Siphiwe pairs deep Salesforce Marketing Cloud core systems architecture with multi-platform agility to resolve technical blocks. Known for mapping high-scale structural architectures that securely sync data points with millisecond execution precision.
                         </p>
 
                         <div class="mb-6">
                             <h4 class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">Cross-Platform Agility</h4>
-                            <div class="flex flex-wrap gap-2">
+                            <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="text-xs bg-emerald-950/40 text-emerald-400 border border-emerald-900/50 px-2.5 py-1 rounded-md font-medium">Braze Developer</span>
-                                <span class="text-xs bg-orange-950/40 text-orange-400 border border-orange-900/50 px-2.5 py-1 rounded-md font-medium">HubSpot</span>
-                                <span class="text-xs bg-purple-950/40 text-purple-400 border border-purple-900/50 px-2.5 py-1 rounded-md font-medium">Klaviyo</span>
+                                <span class="text-xs bg-orange-950/40 text-orange-400 border border-orange-900/50 px-2.5 py-1 rounded-md font-medium">HubSpot Expert</span>
+                                <span class="text-xs bg-purple-950/40 text-purple-400 border border-purple-900/50 px-2.5 py-1 rounded-md font-medium">Klaviyo Architecture</span>
                             </div>
-                        </div>
-
-                        <div class="mb-6">
-                            <h4 class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">Core Expertise</h4>
+                            <h4 class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">Core Technical Domains</h4>
                             <div class="flex flex-wrap gap-2">
                                 <span class="text-xs bg-slate-800 px-3 py-1.5 rounded-md text-slate-300 border border-slate-700/60">System Architecture</span>
-                                <span class="text-xs bg-slate-800 px-3 py-1.5 rounded-md text-slate-300 border border-slate-700/60">Data Cloud Consultations</span>
+                                <span class="text-xs bg-slate-800 px-3 py-1.5 rounded-md text-slate-300 border border-slate-700/60">Data Cloud Engineering</span>
                                 <span class="text-xs bg-slate-800 px-3 py-1.5 rounded-md text-slate-300 border border-slate-700/60">Interaction Studio</span>
                                 <span class="text-xs bg-slate-800 px-3 py-1.5 rounded-md text-slate-300 border border-slate-700/60">OmniStudio Engineering</span>
                             </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div class="mt-4">
                         <h4 class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Salesforce Certifications (6x)</h4>
                         <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-300">
                             <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-cyan-400 text-[10px]"></i> SFMC Developer</li>
@@ -182,8 +216,8 @@
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-slate-900/40 border border-slate-800 p-8 rounded-2xl">
-                <div class="h-10 w-10 bg-indigo-600/10 text-indigo-400 rounded-lg flex items-center justify-center mb-6 text-lg">
+            <div class="bg-slate-900/40 border border-slate-800 p-8 rounded-2xl hover:border-slate-700 transition-colors">
+                <div class="h-10 w-10 bg-indigo-600/10 text-indigo-400 rounded-lg flex items-center justify-center mb-6 text-lg border border-indigo-500/20">
                     <i class="fa-solid fa-people-group"></i>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-3">The Unified Delivery Pod</h3>
@@ -191,8 +225,8 @@
                     Bring us both in together to take full ownership of an implementation or migration project. Siphesande aligns stakeholders and schedules, while Siphiwe designs and maps out the technical architecture.
                 </p>
             </div>
-            <div class="bg-slate-900/40 border border-slate-800 p-8 rounded-2xl">
-                <div class="h-10 w-10 bg-cyan-600/10 text-cyan-400 rounded-lg flex items-center justify-center mb-6 text-lg">
+            <div class="bg-slate-900/40 border border-slate-800 p-8 rounded-2xl hover:border-slate-700 transition-colors">
+                <div class="h-10 w-10 bg-cyan-600/10 text-cyan-400 rounded-lg flex items-center justify-center mb-6 text-lg border border-cyan-500/20">
                     <i class="fa-solid fa-code"></i>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-3">Dedicated Technical Contract</h3>
@@ -200,8 +234,8 @@
                     Contract Siphiwe individually to handle advanced technical milestones: setting up Data Cloud streams, OmniStudio interactions, deep API integrations, or real-time web personalization structures.
                 </p>
             </div>
-            <div class="bg-slate-900/40 border border-slate-800 p-8 rounded-2xl">
-                <div class="h-10 w-10 bg-emerald-600/10 text-emerald-400 rounded-lg flex items-center justify-center mb-6 text-lg">
+            <div class="bg-slate-900/40 border border-slate-800 p-8 rounded-2xl hover:border-slate-700 transition-colors">
+                <div class="h-10 w-10 bg-emerald-600/10 text-emerald-400 rounded-lg flex items-center justify-center mb-6 text-lg border border-emerald-500/20">
                     <i class="fa-solid fa-list-check"></i>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-3">Dedicated Delivery Contract</h3>
@@ -220,35 +254,34 @@
                 <p class="text-slate-400">Whether you are an official Salesforce Partner agency, a recruiter, or an enterprise brand, let us know how we can plug into your roadmap.</p>
             </div>
 
-            <!-- Simple, highly-stylized static form layout -->
             <form action="#" method="POST" class="space-y-6 bg-slate-900 p-8 rounded-2xl border border-slate-800 shadow-xl">
                 <div class="grid sm:grid-cols-2 gap-6">
                     <div>
-                        <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Your Name</label>
-                        <input type="text" required class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 transition-colors">
+                        <label id="name-label" class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Your Name</label>
+                        <input type="text" required aria-labelledby="name-label" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 transition-colors">
                     </div>
                     <div>
-                        <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Company Name</label>
-                        <input type="text" required class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 transition-colors">
+                        <label id="company-label" class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Company Name</label>
+                        <input type="text" required aria-labelledby="company-label" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 transition-colors">
                     </div>
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Corporate Email</label>
-                    <input type="email" required class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 transition-colors">
+                    <label id="email-label" class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Corporate Email</label>
+                    <input type="email" required aria-labelledby="email-label" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 transition-colors">
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Who are you looking to partner with?</label>
-                    <select class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 transition-colors">
+                    <label id="partner-label" class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Who are you looking to partner with?</label>
+                    <select aria-labelledby="partner-label" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 transition-colors">
                         <option class="bg-slate-900">The Full Team (Siphesande & Siphiwe)</option>
                         <option class="bg-slate-900">Technical Architecture Only (Siphiwe)</option>
                         <option class="bg-slate-900">Project Management & Delivery Only (Siphesande)</option>
                     </select>
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Project Scope / Details</label>
-                    <textarea rows="4" required placeholder="Tell us briefly about your SFMC challenges or resourcing needs..." class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors"></textarea>
+                    <label id="scope-label" class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Project Scope / Details</label>
+                    <textarea rows="4" required aria-labelledby="scope-label" placeholder="Tell us briefly about your SFMC challenges or resourcing needs..." class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors"></textarea>
                 </div>
-                <button type="submit" class="w-full py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-xl shadow-lg shadow-indigo-600/30 transition-all text-center">
+                <button type="submit" class="w-full py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-xl shadow-lg shadow-indigo-600/30 transition-all text-center cursor-pointer">
                     Send Inquiry
                 </button>
             </form>
@@ -265,5 +298,29 @@
         </div>
     </footer>
 
+    <!-- Mobile Menu Toggle Logic -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('hidden');
+            const icon = menuBtn.querySelector('i');
+            if(navMenu.classList.contains('hidden')) {
+                icon.className = 'fa-solid fa-bars text-xl';
+            } else {
+                icon.className = 'fa-solid fa-xmark text-xl';
+            }
+        });
+
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if(window.innerWidth < 768) {
+                    navMenu.classList.add('hidden');
+                    menuBtn.querySelector('i').className = 'fa-solid fa-bars text-xl';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
